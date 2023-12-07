@@ -1,0 +1,77 @@
+<html lang="en">
+    <head>
+        <title>Real price</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="static/img/icon.png">
+        <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="bg-light">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="settings" aria-labelledby="settingsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="settingsLabel">Settings</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="text-left">
+                    <h5>Initial units:</h5>
+                    <div class="btn-group mb-4 w-100" role="group" id="units">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col p-2 col-lg-4 col-xl-3 col-md-4 col-sm-6 col-12 hstack">
+                    <button class="btn btn-danger" id="new-list">
+                        New list
+                    </button>
+                    <button class="btn btn-primary ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#settings" aria-controls="settings">
+                        Settings
+                    </button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col p-2 col-lg-4 col-xl-4 col-md-4 col-sm-6 col-12 text-center d-none" id="load-from-storage-warning">
+                    Would you like to load the latest products list?<br />
+                    <a href="#" id="load-from-storage">Yes</a> | <a href="#" id="clear-the-storage">No</a>
+                </div>
+            </div>
+            <div class="row align-items-start justify-content-center" id="items">
+                <div class="col p-2 col-lg-4 col-xl-3 col-md-4 col-sm-6 col-12 d-none item" id="item">
+                    <div class="card text-center p-3">
+                        <div class="text-start hstack mb-2">
+<!--                            <h4 style="border-bottom: 1px dashed #000">Item 1</h4>-->
+                            <input name="item-name" value="Item #" class="item-name h4 border-0 w-100"/>
+                            <a class="btn-close ms-auto mb-1 d-none" href="#"></a>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" class="form-control item-amount" placeholder="Amount" min="0" />
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" class="form-control item-price" placeholder="Price" min="0" />
+                        </div>
+                        <div class="text-start card-total-footer hstack">
+                            <h3 class="d-inline total-price mb-0">0</h3>
+                            <span class="ps-1">per</span>
+                            <span class="ps-1 pe-2 unit-name">kg</span>
+                            <span class="d-none ms-auto badge bg-success">Best price</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-12 m-0 p-2">
+                    <button class="btn btn-primary w-100" id="addItem">+</button>
+                </div>
+            </div>
+<!--            <div class="row justify-content-center mt-3">-->
+<!--                <div class="col-lg-4 col-xl-3 col-md-4 col-sm-6 col-12 m-0 p-2">-->
+<!--                    <button class="btn btn-primary w-100">Save for history</button>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+        <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="static/js/index.js"></script>
+    </body>
+</html>
